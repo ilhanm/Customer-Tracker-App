@@ -20,4 +20,10 @@ public class CustomerServiceImpl implements CustomerService{
         //customerDAO(persistence) --> here(service) --> controller
         return customerDAO.getCustomers();
     }
+
+    @Override
+    @Transactional
+    public void saveCustomer(Customer newCustomer) {
+        customerDAO.saveCustomer(newCustomer);
+    }
 }

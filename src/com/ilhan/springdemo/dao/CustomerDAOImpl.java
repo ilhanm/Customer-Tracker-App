@@ -32,4 +32,11 @@ public class CustomerDAOImpl implements CustomerDAO {
         //return results
         return myCustomers;
     }
+
+    @Override
+    public void saveCustomer(Customer newCustomer) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        currentSession.save(newCustomer);
+        System.out.println("new customer saved to db: "+ newCustomer);
+    }
 }
