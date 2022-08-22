@@ -5,7 +5,11 @@ import com.ilhan.springdemo.entity.Customer;
 import java.util.List;
 
 public interface CustomerService {
+     void deleteCustomer(int theId);
+
     public List<Customer> getCustomers();
 
-    void saveCustomer(Customer newCustomer);
+    void saveCustomer(Customer theCustomer);
+
+    Customer getCustomer(int theId);
 }
