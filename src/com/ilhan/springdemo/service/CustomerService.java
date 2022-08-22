@@ -12,4 +12,6 @@ public interface CustomerService {
     void saveCustomer(Customer theCustomer);
 
     Customer getCustomer(int theId);
+
+    List<Customer> searchCustomers(String theSearchName);
 }
